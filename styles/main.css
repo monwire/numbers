@@ -1,0 +1,139 @@
+& main {
+  margin-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.625rem;
+
+  & #hero {
+    & .hero-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      & #overline {
+        font: var(--overline);
+        text-transform: uppercase;
+        background: var(--gradient-content);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      & h1 {
+        font: var(--display-md);
+        text-transform: uppercase;
+      }
+    }
+
+    & .desktop-only {
+      display: none;
+    }
+  }
+
+  & #randomizer {
+    & #title-form {
+      & h2 {
+        font: var(--label-md);
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  & .mobile-only {
+    display: block;
+
+    & .questions {
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+
+      & .question-wrapper {
+        display: flex;
+        gap: 0.5rem;
+
+        & .question-icon {
+          & .question-icon-img {
+            width: 1.25rem;
+            object-fit: cover;
+          }
+        }
+
+        & .q-and-a {
+          & .question {
+            font: var(--text-md);
+            color: var(--content-brand);
+          }
+
+          & .answer {
+            font: var(--text-sm);
+            color: var(--content-secondary);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 80rem) {
+  & main {
+    margin-inline: 8.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+
+    & #hero {
+      width: 32rem;
+      min-width: 32rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+
+      & .hero-title {
+        & h1 {
+          font: var(--display-lg);
+        }
+      }
+
+      & .desktop-only {
+        display: block;
+
+        & .questions {
+          display: flex;
+          flex-direction: column;
+          gap: 2.25rem;
+
+          & .question-wrapper {
+            display: flex;
+            gap: 0.5rem;
+
+            & .question-icon {
+              & .question-icon-img {
+                width: 1.25rem;
+                object-fit: cover;
+              }
+            }
+
+            & .q-and-a {
+              & .question {
+                font: var(--text-md);
+                color: var(--content-brand);
+              }
+
+              & .answer {
+                font: var(--text-sm);
+                color: var(--content-secondary);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & #randomizer {
+      padding-block: 3rem;
+    }
+
+    & .mobile-only {
+      display: none;
+    }
+  }
+}

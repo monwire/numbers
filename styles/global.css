@@ -45,7 +45,7 @@
   --overline: 700 1rem/150% var(--ff-mono);
   --text-lg: 500 1rem/150% var(--ff-sans2);
   --text-md: 500 0.875rem/150% var(--ff-sans2);
-  --text-sm: 500 0.75/150% var(--ff-sans2);
+  --text-sm: 500 0.75rem/150% var(--ff-sans2);
   --label-md: 700 1.25rem/150% var(--ff-sans2);
   --label-sm: 700 1rem/150% var(--ff-sans2);
 }
@@ -53,4 +53,9 @@
 body {
   background-color: var(--bg-primary);
   color: var(--content-primary);
+}
+
+p {
+  font: var(--text-md);
+  color: var(--content-tertiary);
 }

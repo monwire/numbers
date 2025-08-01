@@ -33,7 +33,9 @@ header {
 
 @media (width >= 80rem) {
   header {
+    padding: 5rem;
     display: flex;
     justify-content: flex-start;
+    margin-inline: 3rem;
   }
 }
