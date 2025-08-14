@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100vh;
+}
+
 :root {
   --content-primary: #ffffff;
   --content-secondary: #c7c9cc;
@@ -31,7 +35,14 @@
     #91a1fa 84.58%
   );
 
-  --gradient-background: linear-gradient(to right, #d586e0 0%, #91a1fa 98.93%);
+  --gradient-background: linear-gradient(
+    to right,
+    #77c0af 0%,
+    #d1dc97 15%,
+    #e9a9b3 32%,
+    #d586e0 67%,
+    #91a1fa 86%
+  );
 
   --gradient-content: linear-gradient(to right, #c7c9cc 0%, #3d3d3d 100%);
 
@@ -51,11 +62,46 @@
 }
 
 body {
+  height: 100%;
+  background-image: url(../assets/images/Shapes.png);
+  background-size: cover;
   background-color: var(--bg-primary);
   color: var(--content-primary);
+  font: var(--text-md);
+}
+
+.overline {
+  font: var(--overline);
+  text-transform: uppercase;
+  background: var(--gradient-content);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+h1 {
+  font: var(--display-md);
+  text-transform: uppercase;
+}
+
+h2 {
+  font: var(--label-md);
+  text-transform: uppercase;
 }
 
 p {
-  font: var(--text-md);
-  color: var(--content-tertiary);
+  color: var(--content-secondary);
+}
+
+label {
+  color: #c7c9cc;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
