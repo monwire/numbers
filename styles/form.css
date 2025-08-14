@@ -13,21 +13,93 @@ form {
       text-align: center;
     }
 
-    & input {
-      font: var(--display-sm);
-      background-color: var(--bg-secondary);
-      border: none;
-      border-radius: 0.5rem;
-      text-align: center;
-      width: 6rem;
-      color: white;
-      padding-inline: 0.5rem;
-      padding-block: 0.25rem;
+    &:focus-within label {
+      color: var(--content-brand);
+    }
 
-      &::placeholder {
-        color: white;
+    & .input-outline-gradient {
+      & input {
+        font: var(--display-sm);
+        background-color: var(--bg-secondary);
+        border: none;
+        border-radius: 0.5rem;
         text-align: center;
+        width: 6rem;
+        color: white;
+        padding-inline: 0.35rem;
+        padding-block: 0.1rem;
+
+        &::placeholder {
+          color: white;
+          text-align: center;
+        }
+
+        &:focus-within {
+          outline: none;
+        }
+      }
+
+      &:focus-within {
+        background: var(--gradient-border);
+        animation: gradientMove 0.5s linear infinite;
       }
     }
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background: linear-gradient(
+      to right,
+      #77c0af 0%,
+      #d1dc97 15%,
+      #e9a9b3 32%,
+      #d586e0 67%,
+      #91a1fa 86%
+    );
+  }
+
+  20% {
+    background: linear-gradient(
+      to right,
+      #d1dc97 0%,
+      #e9a9b3 15%,
+      #d586e0 32%,
+      #91a1fa 67%,
+      #77c0af 86%
+    );
+  }
+
+  40% {
+    background: linear-gradient(
+      to right,
+      #e9a9b3 0%,
+      #d586e0 15%,
+      #91a1fa 32%,
+      #77c0af 67%,
+      #d1dc97 86%
+    );
+  }
+
+  60% {
+    background: linear-gradient(
+      to right,
+      #d586e0 0%,
+      #91a1fa 15%,
+      #77c0af 32%,
+      #d1dc97 67%,
+      #e9a9b3 86%
+    );
+  }
+
+  100% {
+    background: linear-gradient(
+      to right,
+      #91a1fa 0%,
+      #77c0af 15%,
+      #d1dc97 32%,
+      #e9a9b3 67%,
+      #d586e0 86%
+    );
   }
 }

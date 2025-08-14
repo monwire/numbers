@@ -26,6 +26,36 @@
           <div class="overline">online - gratuito</div>
           <h1>sorteador de números</h1>
         </div>
+
+        <div class="faq desktop-only">
+          <div class="faq-box">
+            <img
+              src="assets/icons/question-icon.svg"
+              alt="ícone de pessoa falando"
+            />
+            <div class="faq-text">
+              <div class="question">Como funciona o sorteador de números?</div>
+              <div class="answer">
+                O sorteador utiliza um algoritmo de geração aleatória para criar
+                números dentro do intervalo especificado pelo usuário.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-box">
+            <img
+              src="assets/icons/question-icon.svg"
+              alt="ícone de pessoa falando"
+            />
+            <div class="faq-text">
+              <div class="question">Posso escolher o intervalo de números?</div>
+              <div class="answer">
+                Sim, você pode definir os valores mínimo e máximo para o
+                intervalo dos números sorteados.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="formBox">
@@ -40,23 +70,30 @@
         <form action="">
           <span class="input-field">
             <label for="quantity">números</label>
-            <input
-              type="number"
-              name="quantity"
-              id="quantity"
-              placeholder="2"
-            />
+            <div class="outline-gradient input-outline-gradient">
+              <input type="number" name="quantity" id="quantity" value="2" />
+            </div>
           </span>
           <span class="input-field">
             <label for="min">de</label>
-            <input type="number" name="min" id="min" placeholder="1" />
+            <div class="outline-gradient input-outline-gradient">
+              <input type="number" name="min" id="min" value="1" />
+            </div>
           </span>
           <span class="input-field">
             <label for="quantity">de</label>
-            <input type="number" name="max" id="max" placeholder="100" />
+            <div class="outline-gradient input-outline-gradient">
+              <input type="number" name="max" id="max" value="100" />
+            </div>
           </span>
         </form>
-        <div class="outline-btn">
+
+        <div id="toggleBtn">
+          <input type="checkbox" name="noRepeat" id="noRepeat" />
+          <label for="noRepeat">Não repetir número</label>
+        </div>
+
+        <div class="outline-gradient">
           <button class="btn">
             <span class="btn-text">sortear</span>
             <img
@@ -64,6 +101,36 @@
               alt="ícone de seta para a direita"
             />
           </button>
+        </div>
+      </div>
+
+      <div class="faq mobile-only">
+        <div class="faq-box">
+          <img
+            src="assets/icons/question-icon.svg"
+            alt="ícone de pessoa falando"
+          />
+          <div class="faq-text">
+            <div class="question">Como funciona o sorteador de números?</div>
+            <div class="answer">
+              O sorteador utiliza um algoritmo de geração aleatória para criar
+              números dentro do intervalo especificado pelo usuário.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-box">
+          <img
+            src="assets/icons/question-icon.svg"
+            alt="ícone de pessoa falando"
+          />
+          <div class="faq-text">
+            <div class="question">Posso escolher o intervalo de números?</div>
+            <div class="answer">
+              Sim, você pode definir os valores mínimo e máximo para o intervalo
+              dos números sorteados.
+            </div>
+          </div>
         </div>
       </div>
     </main>

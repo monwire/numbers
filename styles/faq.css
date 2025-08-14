@@ -1,0 +1,35 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+
+  & .faq-box {
+    display: flex;
+    gap: 0.5rem;
+
+    & img {
+      height: 1.25rem;
+      object-fit: contain;
+    }
+
+    & .faq-text {
+      & .question {
+        color: var(--content-brand);
+        font: var(--text-md);
+      }
+
+      & .answer {
+        font: var(--text-sm);
+        color: var(--content-secondary);
+      }
+    }
+  }
+
+  padding-bottom: 3rem;
+}
+
+@media (width >= 80rem) {
+  .mobile-only {
+    display: none;
+  }
+}

@@ -1,4 +1,4 @@
-.outline-btn {
+.outline-gradient {
   width: 100%;
   padding: 0.15rem;
   border-radius: 0.5rem;
@@ -6,7 +6,7 @@
 
   &:hover {
     cursor: pointer;
-    background: var(--gradient-background);
+    background: var(--gradient-border);
     animation: gradientMove 0.5s linear infinite;
   }
 }
@@ -28,6 +28,35 @@
     cursor: pointer;
     background-color: var(--bg-secondary);
     transition: 0.5s;
+  }
+}
+
+#toggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  & input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../assets/icons/toggle-default.svg);
+    width: 2rem;
+    height: 1.4rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:checked {
+      background-image: url(../assets/icons/toggle-active.svg);
+      width: 1.9rem;
+      height: 1.4rem;
+      margin-left: 0.1rem;
+    }
+  }
+
+  & label {
+    color: var(--content-primary);
   }
 }
 
