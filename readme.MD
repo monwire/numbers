@@ -1,20 +1,20 @@
-🎲 Sorteador Animado
+*🎲 Sorteador Animado*
 
 O Sorteador Animado é uma aplicação web interativa que permite sortear números de forma visualmente dinâmica, desenvolvida como parte do curso Full-Stack da Rocketseat, com base em um template fornecido via Figma. Cada número sorteado aparece sequencialmente com animação de queda, e é possível repetir o sorteio com animação de aparecimento do botão de replay.
 
-✨ Funcionalidades
+**✨ Funcionalidades**
 
-🎲 Sortear múltiplos números aleatórios
+- 🎲 Sortear múltiplos números aleatórios
 
-🔁 Evitar repetição de números caso desejado
+- 🔁 Evitar repetição de números caso desejado
 
-🪄 Cada número aparece com animação individual em sequência
+- 🪄 Cada número aparece com animação individual em sequência
 
-🎨 Botão de "Sortear novamente" aparece suavemente após todos os números caírem
+- 🎨 Botão de "Sortear novamente" aparece suavemente após todos os números caírem
 
-⚡ Interface responsiva e moderna baseada no Figma oficial da Rocketseat
+- ⚡ Interface responsiva e moderna baseada no Figma oficial da Rocketseat
 
-🛠 Tecnologias
+**🛠 Tecnologias**
 
 Este projeto foi desenvolvido utilizando:
 
@@ -24,7 +24,7 @@ Este projeto foi desenvolvido utilizando:
 - Figma
 - Responsively App
 
-📄 Licença
+**📄 Licença**
 
 Este projeto foi desenvolvido apenas para fins de aprendizado e não possui uma licença específica.
 
