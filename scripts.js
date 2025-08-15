@@ -17,8 +17,10 @@ const replayGradient = document.getElementById("replayGradient")
 const replayBtn = document.getElementById("replayBtn")
 const drawTurn = document.querySelector("#resultTitle > p")
 
+// duração da animação para cada número sorteado
 const animationDuration = 1100
 
+// as três funções abaixo verificam os valores numéricos dos inputs
 quantityInput.addEventListener("input", () => {
   const value = quantityInput.value
 
@@ -61,6 +63,7 @@ maxInput.addEventListener("input", () => {
   }
 })
 
+// adição de evento ao botão de "sortear"
 drawBtn.addEventListener("click", () => {
   let min = Number(minInput.value)
   let max = Number(maxInput.value)
@@ -79,6 +82,7 @@ drawBtn.addEventListener("click", () => {
 
   drawNumbers(min, max, quantity, turn)
 
+  // função para repetir sorteio
   replayBtn.addEventListener("click", () => {
     drawnNumbers.innerHTML = ""
     turn++
@@ -86,6 +90,7 @@ drawBtn.addEventListener("click", () => {
   })
 })
 
+// função de sorteio dos números
 function drawNumbers(min, max, quantity, turn) {
   const numbers = []
 
