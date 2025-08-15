@@ -29,6 +29,53 @@ main {
         font: var(--text-md);
       }
     }
+
+    & #result {
+      display: none;
+      & #resultTitle {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        align-items: center;
+
+        & h1 {
+          text-transform: uppercase;
+        }
+
+        & p {
+          text-transform: uppercase;
+        }
+      }
+
+      & #drawnNumbers {
+        display: flex;
+        justify-content: center;
+        gap: 0.25rem;
+        flex-wrap: wrap;
+        & .number {
+          font-family: var(--ff-mono);
+          font-size: 3rem;
+          line-height: 150%;
+          border-radius: 1.75rem;
+          padding-inline: 1.375rem;
+          padding-block: 1.125rem;
+          color: var(--content-brand);
+          animation-name: fallingNumbers;
+          animation-duration: 1s;
+
+          animation-fill-mode: forwards;
+          animation-timing-function: linear;
+        }
+      }
+
+      & .replay-btn {
+        opacity: 0;
+      }
+
+      & .replay-btn.show {
+        animation: appear 2s ease-in forwards;
+      }
+    }
   }
 }
 
@@ -54,12 +101,66 @@ main {
 
     & #formBox {
       padding-left: 6.75rem;
+      min-width: 45%;
+      max-width: 45%;
 
       & #formHeader {
         & p {
           font: var(--text-lg);
         }
       }
+
+      & #result {
+        & #resultTitle {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+          align-items: center;
+
+          & h1 {
+            text-transform: uppercase;
+          }
+
+          & p {
+            text-transform: uppercase;
+          }
+        }
+
+        & #drawnNumbers {
+          display: flex;
+          flex-direction: row;
+          gap: 0.25;
+          flex-wrap: wrap;
+        }
+      }
     }
+  }
+}
+
+@keyframes fallingNumbers {
+  0% {
+    color: var(--content-brand);
+    background-color: var(--content-brand);
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  50% {
+    color: var(--content-brand);
+    background-color: var(--content-brand);
+  }
+
+  100% {
+    color: var(--content-brand);
+    background-color: none;
+    transform: translateY(0%) rotate(360deg);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

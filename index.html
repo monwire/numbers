@@ -81,7 +81,7 @@
             </div>
           </span>
           <span class="input-field">
-            <label for="quantity">de</label>
+            <label for="max">até</label>
             <div class="outline-gradient input-outline-gradient">
               <input type="number" name="max" id="max" value="100" />
             </div>
@@ -93,8 +93,24 @@
           <label for="noRepeat">Não repetir número</label>
         </div>
 
-        <div class="outline-gradient">
-          <button class="btn">
+        <div id="result">
+          <div id="resultTitle">
+            <h2>resultado do sorteio</h2>
+            <p></p>
+          </div>
+
+          <div id="drawnNumbers"></div>
+
+          <div class="outline-gradient replay-btn" id="replayGradient">
+            <button class="btn" id="replayBtn">
+              <span class="btn-text">sortear novamente</span>
+              <img src="assets/icons/replay-icon.svg" alt="ícone de replay" />
+            </button>
+          </div>
+        </div>
+
+        <div class="outline-gradient" id="drawBtnDiv">
+          <button class="btn" id="drawBtn">
             <span class="btn-text">sortear</span>
             <img
               src="assets/icons/arrow-icon.svg"
